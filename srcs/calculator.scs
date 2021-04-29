@@ -1,0 +1,36 @@
+
+concept_electronic_device_Calculator
+	=> nrel_main_idtf:
+		[Электронное устройство калькулятор] (* <-lang_ru;; *);
+		[Electronic device calculator] (* <-lang_en;; *);
+
+	<- rrel_key_sc_element:... (*
+		=> nrel_main_idtf:
+			[Описание(Электронное устройство калькулятор)] (* <-lang_ru;; *);
+			[Description(Electronic device calculator)](*<-lang_en;;*);;
+		<= nrel_sc_text_translation: ... (*
+			->rrel_example:
+				"file://html/concept_electronic_device_calculator_def_ru.html"
+				 	(*<-lang_ru;;=>nrel_format:format_html;;*);;
+			->rrel_example:
+				"file://html/concept_electronic_device_calculator_def_en.html"
+					(*<-lang_en;;=>nrel_format:format_html;;*);;
+			*);;
+	*);
+	<- rrel_key_sc_element:... (*
+		<-illustration;;
+		=>nrel_main_idtf:
+			[Рис. (Электронное устройство калькулятор)](*<-lang_ru;;*);
+			[Pic. (Electronic device calculator)](*<-lang_en;;*);;
+		<=nrel_sc_text_translation:... (*
+			->"file://img/basic_calculator.jpeg"(*=>nrel_format:format_jpg;;*);;
+		*);;
+	*);
+//
+=>nrel_component: concept_calculators_keyboard;
+
+=>nrel_component: concept_lcd;
+
+=>nrel_component: concept_calculators_microprocessor;
+
+=>nrel_component: concept_battery;;

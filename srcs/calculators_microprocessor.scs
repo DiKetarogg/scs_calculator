@@ -1,0 +1,33 @@
+concept_calculators_microprocessor
+	=> nrel_main_idtf:
+		[Микропроцессор калькулятора] (* <-lang_ru;; *);
+		[Calculator's microprocessor] (* <-lang_en;; *);
+
+	<- rrel_key_sc_element:... (*
+		=> nrel_main_idtf:
+			[Описание(Микрокроцессор калькулятора)] (* <-lang_ru;; *);
+			[Description(Calculator's microprocessor)](*<-lang_en;;*);;
+		<= nrel_sc_text_translation: ... (*
+			->rrel_example:
+				"file://html/concept_calculator_microprocessor_def_ru.html"
+				 	(*<-lang_ru;;=>nrel_format:format_html;;*);;
+			->rrel_example:
+				"file://html/concept_calculator_microprocessor_def_en.html"
+					(*<-lang_en;;=>nrel_format:format_html;;*);;
+			*);;
+	*);
+	<- rrel_key_sc_element:... (*
+		<-illustration;;
+		=>nrel_main_idtf:
+			[Рис. (Микропроцессор калькулятора)](*<-lang_ru;;*);
+			[Pic. (Calculator's microprocessor)](*<-lang_en;;*);;
+		<=nrel_sc_text_translation:... (*
+			->"file://img/calculator_microprocessor.jpeg"(*=>nrel_format:format_jpg;;*);;
+		*);;
+	*);
+
+=>nrel_component: concept_ram;
+
+=>nrel_component: concept_alu;
+
+=>nrel_component: concept_rom;;

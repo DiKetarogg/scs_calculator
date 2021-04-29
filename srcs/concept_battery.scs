@@ -1,0 +1,35 @@
+concept_battery
+	=> nrel_main_idtf:
+		[Аккумулятор] (* <-lang_ru;; *);
+		[Battery] (* <-lang_en;; *);
+
+	<- rrel_key_sc_element:... (*
+		=> nrel_main_idtf:
+			[Описание(Аккумулятор)] (* <-lang_ru;; *);
+			[Description(Battery)](*<-lang_en;;*);;
+		<= nrel_sc_text_translation: ... (*
+			->rrel_example:
+				"file://html/concept_battery_def_ru.html"
+				 	(*<-lang_ru;;=>nrel_format:format_html;;*);;
+			->rrel_example:
+				"file://html/concept_battery_def_en.html"
+					(*<-lang_en;;=>nrel_format:format_html;;*);;
+			*);;
+	*);
+	<- rrel_key_sc_element:... (*
+		<-illustration;;
+		=>nrel_main_idtf:
+			[Рис. (Аккумулятор)](*<-lang_ru;;*);
+			[Pic. (Battery)](*<-lang_en;;*);;
+		<=nrel_sc_text_translation:... (*
+			->"file://img/battery.jpeg"(*=>nrel_format:format_jpg;;*);;
+		*);;
+	*);
+
+=>nrel_component: concept_anode;
+
+=>nrel_component: concept_cathode;
+
+=>nrel_component: concept_electrochemical_cell;
+
+=>nrel_component: concept_electrolyte;;

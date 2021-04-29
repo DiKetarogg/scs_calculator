@@ -1,0 +1,29 @@
+concept_lcd
+	=> nrel_main_idtf:
+		[ЖКД] (* <-lang_ru;; *);
+		[LCD] (* <-lang_en;; *);
+
+	<- rrel_key_sc_element:... (*
+		=> nrel_main_idtf:
+			[Описание(ЖКД)] (* <-lang_ru;; *);
+			[Description(LCD)](*<-lang_en;;*);;
+		<= nrel_sc_text_translation: ... (*
+			->rrel_example:
+				"file://html/concept_lcd_def_ru.html"
+				 	(*<-lang_ru;;=>nrel_format:format_html;;*);;
+			->rrel_example:
+				"file://html/concept_lcd_def_en.html"
+					(*<-lang_en;;=>nrel_format:format_html;;*);;
+			*);;
+	*);
+	<- rrel_key_sc_element:... (*
+		<-illustration;;
+		=>nrel_main_idtf:
+			[Рис. (ЖКД)](*<-lang_ru;;*);
+			[Pic. (LCD)](*<-lang_en;;*);;
+		<=nrel_sc_text_translation:... (*
+			->"file://img/lcd.jpeg"(*=>nrel_format:format_jpg;;*);;
+		*);;
+	*);
+
+=>nrel_component: concept_lc_pixel;;
